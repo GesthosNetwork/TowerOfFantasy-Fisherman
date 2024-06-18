@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+	<UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<PackageIcon>icon_resized.png</PackageIcon>
+	<ApplicationIcon>img\icon_resized.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\arrow_day.png" />
+    <None Remove="img\arrow_night.png" />
+    <None Remove="img\day.png" />
+    <None Remove="img\info_day.png" />
+    <None Remove="img\info_night.png" />
+    <None Remove="img\night.png" />
+    <None Remove="img\setting_day.png" />
+    <None Remove="img\setting_night.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="img\icon_resized.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\arrow_day.png" />
+    <Resource Include="img\arrow_night.png" />
+    <Resource Include="img\day.png" />
+    <Resource Include="img\info_day.png" />
+    <Resource Include="img\info_night.png" />
+    <Resource Include="img\night.png" />
+    <Resource Include="img\setting_day.png" />
+    <Resource Include="img\setting_night.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Config.Net" Version="5.2.0" />
+    <PackageReference Include="OpenCvSharp4" Version="4.9.0.20240103" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.9.0.20240103" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.9.0.20240103" />
+    <PackageReference Include="SharpDX" Version="4.2.0" />
+    <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
+    <PackageReference Include="WindowsHook" Version="1.0.1" />
+    <PackageReference Include="WpfScreenHelper" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsInput\WindowsInput.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="img\icon_resized.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  
+  <PropertyGroup>
+	<NoWarn>$(NoWarn);0169;0414;8601;8618;8622</NoWarn>
+	<AnalysisLevel>latest</AnalysisLevel>
+  </PropertyGroup>
+
+</Project>
