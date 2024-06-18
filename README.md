@@ -1,4 +1,4 @@
-# ToF Fishing Bot
+# TOF Fishing Bot
 
 Supports Aesperia, Artificial Island, Vera, Confounding Abyss, Innars, and Domain 9
 
